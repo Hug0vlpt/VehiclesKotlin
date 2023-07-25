@@ -1,6 +1,7 @@
-package classesV
+package bicycle
 
-import enums.Noise
+import Noise
+import vehicle.Vehicle
 
 class Bicycle: Vehicle() {
     override val name = "bicycle"

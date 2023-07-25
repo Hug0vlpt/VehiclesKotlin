@@ -1,7 +1,6 @@
-package classesV
+package vehicle
 
-import interfacesV.IVehicle
-import enums.Noise
+import Noise
 
 abstract class Vehicle : IVehicle {
     abstract val name: String

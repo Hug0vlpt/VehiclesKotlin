@@ -1,7 +1,6 @@
-package classesV.fuelV
+package fuel
 
-import classesV.Vehicle
-import interfacesV.IFuelVehicle
+import vehicle.Vehicle
 
 abstract class FuelVehicle: Vehicle(), IFuelVehicle {
     override fun refueling() {

@@ -1,6 +1,6 @@
-package interfacesV
+package vehicle
 
-import enums.Noise
+import Noise
 
 interface IVehicle {
     fun start()

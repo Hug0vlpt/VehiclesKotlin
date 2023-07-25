@@ -1,9 +1,9 @@
-package classesV.electricV
+package hybrid
 
-import enums.Noise
+import Noise
 
-class ElectricCar: ElectricVehicle() {
-    override val name = "electric car"
+class HybridCar: HybridVehicle() {
+    override val name = "hybrid car"
     override val nbWheels = 4
     override val noisePoll = Noise.QUIET
     fun turnOnRadio() {

@@ -1,6 +1,6 @@
-package classesV.fuelV
+package fuel
 
-import enums.Noise
+import Noise
 
 class FuelMotoC: FuelVehicle() {
     override val name = "fuel motorcycle"

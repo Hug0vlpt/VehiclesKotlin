@@ -1,7 +1,6 @@
-package classesV.electricV
+package electric
 
-import classesV.Vehicle
-import interfacesV.IElectricVehicle
+import vehicle.Vehicle
 
 abstract class ElectricVehicle: Vehicle(), IElectricVehicle {
     override fun recharging() {

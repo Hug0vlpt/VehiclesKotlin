@@ -1,6 +1,7 @@
-package classesV.electricV
+package electric
 
-import enums.Noise
+import Noise
+import electric.ElectricVehicle
 
 class ElecMotoC: ElectricVehicle() {
     override val name = "electric motorcycle"

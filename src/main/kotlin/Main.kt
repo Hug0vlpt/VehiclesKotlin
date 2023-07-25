@@ -1,9 +1,11 @@
-import classesV.electricV.ElectricCar
-import classesV.fuelV.FuelCar
-import classesV.electricV.ElecMotoC
-import classesV.fuelV.FuelMotoC
-import classesV.hybridV.HybridCar
-import classesV.Bicycle
+import bicycle.Bicycle
+import electric.ElecMotoC
+import electric.ElectricCar
+import electric.IElectricVehicle
+import fuel.FuelCar
+import fuel.FuelMotoC
+import hybrid.HybridCar
+import vehicle.Vehicle
 
 fun main () {
     val eCar = ElectricCar()
@@ -16,7 +18,7 @@ fun main () {
     println("▼ INFOS")
     var nbw: Int = eCar.getNbW()
     println("The ${eCar.name} has $nbw wheels.")
-    var npl: enums.Noise = eCar.getNP()
+    var npl: Noise = eCar.getNP()
     println("The ${eCar.name} is $npl.")
     eCar.recharging()
     println()
@@ -36,7 +38,7 @@ fun main () {
     fCar.refueling()
     println()
 
-    val hCar = HybridCar()
+/*  val hCar = HybridCar()
     println("▼ ACTIONS")
     hCar.start()
     hCar.turnOnRadio()
@@ -51,7 +53,7 @@ fun main () {
     hCar.refueling()
     hCar.recharging()
     println()
-
+*/
     val eMoto = ElecMotoC()
     println("▼ ACTIONS")
     eMoto.start()
@@ -95,4 +97,16 @@ fun main () {
     println("The ${bCy.name} has $nbw wheels.")
     npl = bCy.getNP()
     println("The ${bCy.name} is $npl.")
+
+    val test: IElectricVehicle = HybridCar()
+    test.recharging()
+
+    val test2: List<Vehicle> = listOf(ElectricCar(), FuelCar(), Bicycle(), HybridCar())
+    for (vehicle in test2) {
+        vehicle.start()
+        if (vehicle is IElectricVehicle) {
+            vehicle.stop()
+            vehicle.recharging()
+        }
+    }
 }
