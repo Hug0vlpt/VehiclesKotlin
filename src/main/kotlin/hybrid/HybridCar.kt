@@ -2,6 +2,8 @@ package hybrid
 
 import Noise
 
+//import vehicle.Vehicle
+
 class HybridCar: HybridVehicle() {
     override val name = "hybrid car"
     override val nbWheels = 4

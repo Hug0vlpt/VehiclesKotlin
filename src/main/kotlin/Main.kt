@@ -38,7 +38,7 @@ fun main () {
     fCar.refueling()
     println()
 
-/*  val hCar = HybridCar()
+    val hCar = HybridCar()
     println("▼ ACTIONS")
     hCar.start()
     hCar.turnOnRadio()
@@ -53,7 +53,7 @@ fun main () {
     hCar.refueling()
     hCar.recharging()
     println()
-*/
+
     val eMoto = ElecMotoC()
     println("▼ ACTIONS")
     eMoto.start()
@@ -98,9 +98,11 @@ fun main () {
     npl = bCy.getNP()
     println("The ${bCy.name} is $npl.")
 
+    println()
     val test: IElectricVehicle = HybridCar()
     test.recharging()
 
+    println()
     val test2: List<Vehicle> = listOf(ElectricCar(), FuelCar(), Bicycle(), HybridCar())
     for (vehicle in test2) {
         vehicle.start()
